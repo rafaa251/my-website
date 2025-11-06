@@ -1,0 +1,269 @@
+:root {
+    --neon-green: #00ffcc;
+    --light-gray: #ccc;
+    --dark-gray: #111;
+    --medium-gray: #222;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #000;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.logo {
+    font-size: 16px;
+    color: var(--neon-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--neon-green);
+}
+
+.hero {
+    padding: 80px 50px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 120px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.service {
+    display: flex;
+    min-height: 600px;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.service:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: var(--dark-gray);
+}
+
+.service-content {
+    flex: 1;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-content h2 {
+    font-size: 72px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 0.9;
+    font-weight: 700;
+}
+
+.service-content p {
+    font-size: 20px;
+    margin: 0 0 40px 0;
+    color: var(--light-gray);
+    line-height: 1.4;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    font-size: 14px;
+}
+
+.order-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.service-image {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.training-section .service-image {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('#');
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #000;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.footer-logo {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 0.9;
+}
+
+.footer-logo div:first-child {
+    font-size: 120px;
+    margin-bottom: -20px;
+    display: block;
+}
+
+.footer-logo div:last-child {
+    font-size: 120px;
+    margin-left: 50px;
+    display: block;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-nav, .footer-contacts {
+    text-align: left;
+}
+
+.footer-nav h3, .footer-contacts h3 {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.footer-nav ul, .footer-contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a, .footer-contacts a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-nav a:hover, .footer-contacts a:hover {
+    color: var(--neon-green);
+}
+
+.footer-contacts img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column !important;
+    }
+
+    .service-content, .service-image {
+        padding: 40px;
+    }
+
+    .service-content h2 {
+        font-size: 40px;
+    }
+
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-logo div:first-child,
+    .footer-logo div:last-child {
+        font-size: 60px;
+        margin-left: 0;
+    }
+
+    .footer-nav ul, .footer-contacts ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content {
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+

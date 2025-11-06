@@ -1,0 +1,205 @@
+:root {
+    --neon-green: #00ffcc;
+    --light-gray: #ccc;
+    --dark-gray: #111;
+    --medium-gray: #222;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #000;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.logo {
+    font-size: 16px;
+    color: var(--neon-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--neon-green);
+}
+
+.about-hero {
+    padding: 80px 50px;
+    text-align: left;
+}
+
+.about-hero h1 {
+    font-size: 120px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.about-content {
+    padding: 50px;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.about-item {
+    margin-bottom: 30px;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.about-item p {
+    font-size: 16px;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #000;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.footer-logo {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 0.9;
+}
+
+.footer-logo div:first-child {
+    font-size: 120px;
+    margin-bottom: -20px;
+    display: block;
+}
+
+.footer-logo div:last-child {
+    font-size: 120px;
+    margin-left: 50px;
+    display: block;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-nav, .footer-contacts {
+    text-align: left;
+}
+
+.footer-nav h3, .footer-contacts h3 {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.footer-nav ul, .footer-contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a, .footer-contacts a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-nav a:hover, .footer-contacts a:hover {
+    color: var(--neon-green);
+}
+
+.footer-contacts img {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-logo div:first-child,
+    .footer-logo div:last-child {
+        font-size: 60px;
+        margin-left: 0;
+    }
+
+    .footer-nav ul, .footer-contacts ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content {
+        align-items: center;
+    }
+
+    .about-hero h1 {
+        font-size: 60px;
+    }
+}
